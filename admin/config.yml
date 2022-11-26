@@ -1,7 +1,7 @@
 # config.yml
 
 backend:
-  name:  iverybee/photoramaKira 
+  name:  photoramaKira 
   branch: gf-stage # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 collections:
