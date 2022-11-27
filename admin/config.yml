@@ -5,9 +5,18 @@ backend:
   branch: gf-stage # Branch to update (optional; defaults to master)
 media_folder: 'workspaces/photoramaKira/gallery/newIma'
 collections:
+  - label: "Tags"
+    name: "tags"
+    widget: "list"
+    summary: '{{fields.name}}'
+    fields: 
+      - {label: Name, name: name, widget: string}
   - name: 'blog'
     label: 'Blog'
     folder: '_posts/'
+    filter:
+    field: language
+    value: de
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
@@ -25,6 +34,7 @@ collections:
           search_fields: [display_name],
           value_field: 'name',
         }
+      - {label: "Language", name: "language"}
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'authors'
     label: 'Authors'
