@@ -3,10 +3,11 @@
 backend:
   name:  git-gateway 
   branch: gf-stage # Branch to update (optional; defaults to master)
-media_folder: 'workspaces/photoramaKira/gallery/newIma'
+media_folder: 'gallery/newIma/'
 collections:
-  - label: "Tags"
-    name: "tags"
+  - name: "tags"
+    label: "Tags"
+    folder: 'journal/tag/'
     widget: "list"
     summary: '{{fields.name}}'
     fields: 
