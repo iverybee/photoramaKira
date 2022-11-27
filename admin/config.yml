@@ -8,10 +8,13 @@ collections:
   - name: "tags"
     label: "Tags"
     folder: 'journal/tag/'
+    create: true
+    editor:
+      preview: false
     widget: "list"
     summary: '{{fields.name}}'
     fields: 
-      - {label: Name, name: name, widget: string}
+      - {label: Tagname, name: tag_name, widget: string}
   - name: 'blog'
     label: 'Blog'
     folder: '_posts/'
@@ -36,6 +39,15 @@ collections:
           value_field: 'name',
         }
       - {label: "Language", name: "language"}
+      - {
+        label: "Tags",
+        name: "tags",
+        widget: 'relation',
+        collection: 'authors',
+        display_fields: [tag_name],
+        search_fields: [tag_name],
+        value_field: 'tag_name',
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'authors'
     label: 'Authors'
