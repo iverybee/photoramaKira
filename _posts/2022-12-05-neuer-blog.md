@@ -9,4 +9,8 @@ tag: Kurt
 ---
 t﻿estestesdfedf
 
+![Menschliche Darstellung Bleistift](/gallery/newIma/Kira_BIG.jpg "The Notorious B.I.G")
+
+
+
 ![Kurt](/gallery/newIma/Kira_IMG-20131212-WA0011.jpg "Kurt Bleistieft")
