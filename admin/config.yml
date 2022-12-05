@@ -11,8 +11,6 @@ collections:
     create: true
     editor:
       preview: false
-    widget: "list"
-    summary: '{{fields.name}}'
     fields: 
       - {label: Tagname, name: tag_name, widget: string}
   - name: 'blog'
@@ -30,12 +28,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Subtitle', name: 'subtitel', widget: 'string' }
-      - { 
-        label: 'Header-Image',
-        name: 'header', 
-        widget: 'relation',
-        collection: 'picturs'
-        }
       - {
           label: 'Author',
           name: 'author',
@@ -47,10 +39,10 @@ collections:
         }
       - {label: "Language", name: "language"}
       - {
-        label: "Tags",
-        name: "tags",
+        label: "Tag",
+        name: "tag",
         widget: 'relation',
-        collection: 'authors',
+        collection: 'tags',
         display_fields: [tag_name],
         search_fields: [tag_name],
         value_field: 'tag_name',
